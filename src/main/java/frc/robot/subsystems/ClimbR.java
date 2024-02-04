@@ -9,53 +9,35 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 //import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 
-public class Climb extends SubsystemBase {
+public class ClimbR extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
-  private final WPI_VictorSPX Lmotor1 = new WPI_VictorSPX(MotorConstants.kLClm1);
-   private final WPI_VictorSPX Lmotor2 = new WPI_VictorSPX(MotorConstants.kLClm2);
+  
     private final WPI_VictorSPX Rmotor1 = new WPI_VictorSPX(MotorConstants.kRClm1);
      private final WPI_VictorSPX Rmotor2 = new WPI_VictorSPX(MotorConstants.kRClm2);
 
      //private final MotorControllerGroup left = new MotorControllerGroup(Lmotor1, Lmotor2);
-  public Climb() {}
+  public ClimbR() {}
 
-// left claw goes up.
-  public void clawsUpL(){
-    Lmotor1.set(0.5);
-    Lmotor2.set(0.5);
-   
-  }
 
-// left claw goes down.
-  public void clawsDownL(){
-    Lmotor1.set(-0.5);
-    Lmotor2.set(-0.5);
-   
-  }
 
   // right claw goes up.
-  public void clawsUpR(){
+  public void clawsUp(){
    
     Rmotor1.set(0.5);
     Rmotor2.set(0.5);
   }
 
  // right claw goes down.
-  public void clawsDownR(){
+  public void clawsDown(){
    
     Rmotor1.set(-0.5);
     Rmotor2.set(-0.5);
   }
 
-  // left claw stops moving.
-  public void StopL(){
-    Lmotor1.set(0);
-    Lmotor2.set(0);
-   
-  }
+ 
 
   // right claw stops moving.
-  public void StopR(){
+  public void Stop(){
     Rmotor1.set(0);
     Rmotor2.set(0);
   }

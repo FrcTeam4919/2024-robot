@@ -4,24 +4,24 @@
 
 package frc.robot.commands;
 
-import frc.robot.subsystems.Climb;
+import frc.robot.subsystems.ClimbL;
 import edu.wpi.first.wpilibj2.command.Command;
 
 
 /** An example command that uses an example subsystem. */
 public class armsDownL extends Command {
   @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
-  private final Climb m_Climb;
+  private final ClimbL m_ClimbL;
 
   /**
    * Creates a new ExampleCommand.
    *
    * @param subsystem The subsystem used by this command.
    */
-  public armsDownL(Climb Climb) {
-    m_Climb = Climb;
+  public armsDownL(ClimbL ClimbL) {
+    m_ClimbL = ClimbL;
     // Use addRequirements() here to declare subsystem dependencies.
-    addRequirements(Climb);
+    addRequirements(ClimbL);
   }
 
   // Called when the command is initially scheduled.
@@ -33,13 +33,13 @@ public class armsDownL extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_Climb.clawsDownL();
+    m_ClimbL.clawsDown();
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-     m_Climb.StopL();
+     m_ClimbL.Stop();
   }
 
   // Returns true when the command should end.
