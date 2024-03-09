@@ -69,7 +69,27 @@ public class Climb extends SubsystemBase {
     Rmotor1.set(0);
     Rmotor2.set(0);
   }
-   
+   //both claws up
+   public void clawsUpB(){
+    Rmotor1.set(0.5);
+    Rmotor2.set(0.5);
+    Lmotor1.set(0.5);
+    Lmotor2.set(0.5);
+   }
+   //both claws down
+   public void ClawsDownB(){
+     Rmotor1.set(-0.5);
+     Rmotor2.set(-0.5);
+     Lmotor1.set(-0.5);
+     Lmotor2.set(-0.5);
+   }
+   //both claws stop
+   public void StopB(){
+     Rmotor1.set(0);
+     Rmotor2.set(0);
+     Lmotor1.set(0);
+     Lmotor2.set(0);
+   }
   
   /**
    * Example command factory method.
@@ -102,6 +122,10 @@ public class Climb extends SubsystemBase {
      SmartDashboard.putNumber("Left two Voltage", voltLeft2());
      SmartDashboard.putNumber("Right One Voltage", voltRight1());
       SmartDashboard.putNumber("Right two Voltage", voltRight2());
+      if (voltLeft1()>1&&voltLeft2()>1){
+      
+      }
+
   }
 
   @Override
@@ -117,11 +141,11 @@ public class Climb extends SubsystemBase {
     return voltLeft2;
   }
    public double voltRight1(){
-    double voltLeft1 = PowerDistribution.getCurrent(4);
-    return voltLeft1;
+    double voltRight1 = PowerDistribution.getCurrent(4);
+    return voltRight1;
   }
   public double voltRight2(){
-    double voltLeft1 = PowerDistribution.getCurrent(5);
-    return voltLeft1;
+    double voltRight2 = PowerDistribution.getCurrent(5);
+    return voltRight2;
   }
 }

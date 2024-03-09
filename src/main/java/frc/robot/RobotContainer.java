@@ -17,9 +17,12 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.math.MathUtil;
 
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 //import commands
+import frc.robot.commands.armsUpB;
+import frc.robot.commands.armsDownB;
 import frc.robot.commands.armsDownL;
 import frc.robot.commands.armsDownR;
 import frc.robot.commands.armsUpL;
@@ -75,7 +78,8 @@ public class RobotContainer {
     private final shootFast m_ShootSlow = new shootFast(m_Shooter);
     private final ReverseShot m_ReverseShot = new ReverseShot(m_Shooter);
     private final shootSlow m_Shootslow = new shootSlow(m_Shooter);
-    
+    private final armsUpB m_ArmsUpB = new armsUpB(m_Climb);
+    private final armsDownB m_ArmsDownB = new armsDownB(m_Climb);
     private final rollerSpinIn m_LowIn = new rollerSpinIn(m_Pickup);
     private final rollorSpinOut m_LowOut = new rollorSpinOut(m_Pickup);
     // Default
@@ -127,7 +131,9 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-
+    // (voltLeft1>1).whileTrue(m_ArmsUpB);
+     
+    
     armsDownL.whileTrue(m_ArmsDownL);
     armsDownR.whileTrue(m_ArmsDownR);
     armsUpL.whileTrue(m_ArmsUpL);
