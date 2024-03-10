@@ -90,9 +90,9 @@ public final class Constants {
     public static final int kLeftFrontDrive = 2;
     public static final int kLeftBackDrive = 4;
     public static final int kRightFrontDrive = 1;
-    public static final int kRightBackDrive = 3;
+    public static final int kRightBackDrive = 11;
     public static final int kLeftFrontTurn = 6;
-    public static final int kLeftBackTurn = 8;
+    public static final int kLeftBackTurn = 9;
     public static final int kRightFrontTurn = 5;
     public static final int kRightBackTurn = 7;
 
