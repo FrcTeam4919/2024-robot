@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Climb extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
+   public static Boolean Both = false;
   private final WPI_VictorSPX Lmotor1 = new WPI_VictorSPX(MotorConstants.kLClm1);
    private final WPI_VictorSPX Lmotor2 = new WPI_VictorSPX(MotorConstants.kLClm2);
     private final WPI_VictorSPX Rmotor1 = new WPI_VictorSPX(MotorConstants.kRClm1);
@@ -90,6 +91,9 @@ public class Climb extends SubsystemBase {
      Lmotor1.set(0);
      Lmotor2.set(0);
    }
+   public boolean getB(){
+    return Both;
+   }
    // simplify volt controll
   /**
    * Example command factory method.
@@ -122,10 +126,12 @@ public class Climb extends SubsystemBase {
      SmartDashboard.putNumber("Left two Voltage", voltLeft2());
      SmartDashboard.putNumber("Right One Voltage", voltRight1());
       SmartDashboard.putNumber("Right two Voltage", voltRight2());
-      if (voltLeft1()>1&&voltLeft2()>1){
-      
+      if (voltLeft1()>10&&voltLeft2()>10){
+       Both = true;
       }
-
+      else {
+        Both = false;
+      }
   }
 
   @Override

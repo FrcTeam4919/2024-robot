@@ -131,10 +131,13 @@ public class RobotContainer {
    * joysticks}.
    */
   private void configureBindings() {
-    // (voltLeft1>1).whileTrue(m_ArmsUpB);
+    while (m_Climb.getB()){
+      armsUpR.whileTrue(m_ArmsUpB);
+   }
+    
      
-    armsDownL.whileTrue( m_ArmsDownB);
-    armsDownR.whileTrue( m_ArmsDownB);
+    //armsDownL.whileTrue( m_ArmsDownB);
+    //armsDownR.whileTrue( m_ArmsDownB);
     armsDownL.whileTrue(m_ArmsDownL);
     armsDownR.whileTrue(m_ArmsDownR);
     armsUpL.whileTrue(m_ArmsUpL);
