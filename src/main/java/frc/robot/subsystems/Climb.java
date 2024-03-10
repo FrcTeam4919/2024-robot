@@ -90,7 +90,7 @@ public class Climb extends SubsystemBase {
      Lmotor1.set(0);
      Lmotor2.set(0);
    }
-  
+   // simplify volt controll
   /**
    * Example command factory method.
    *
