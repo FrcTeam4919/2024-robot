@@ -126,7 +126,7 @@ public class Climb extends SubsystemBase {
      SmartDashboard.putNumber("Left two Voltage", voltLeft2());
      SmartDashboard.putNumber("Right One Voltage", voltRight1());
       SmartDashboard.putNumber("Right two Voltage", voltRight2());
-      if (voltLeft1()>10&&voltLeft2()>10){
+      if (voltLeft1()>10&&voltRight1()>10){
        Both = true;
       }
       else {
@@ -139,7 +139,7 @@ public class Climb extends SubsystemBase {
     // This method will be called once per scheduler run during simulation
   }
   public double voltLeft1(){
-    double voltLeft1 = PowerDistribution.getCurrent(6);
+    double voltLeft1 = PowerDistribution.getCurrent(1);
     return voltLeft1;
   }
    public double voltLeft2(){
@@ -147,7 +147,7 @@ public class Climb extends SubsystemBase {
     return voltLeft2;
   }
    public double voltRight1(){
-    double voltRight1 = PowerDistribution.getCurrent(4);
+    double voltRight1 = PowerDistribution.getCurrent(3);
     return voltRight1;
   }
   public double voltRight2(){

@@ -18,9 +18,9 @@ public final class Constants {
   }
   public static class MotorConstants {
     // climbing motor channels.
-    public static final int kRClm1 = 9;
+    public static final int kRClm1 = 8;
     public static final int kRClm2 = 10;
-    public static final int kLClm1 = 11;
+    public static final int kLClm1 = 6;
     public static final int kLClm2 = 12;
     // shoot channel
     public static final int kShoot = 13;
