@@ -20,7 +20,7 @@ public class  rollerSpinIn extends Command {
   public rollerSpinIn(Pickup Pickup) {
     m_Pickup = Pickup;
     // Use addRequirements() here to declare subsystem dependencies.
-    addRequirements(m_Pickup);
+     addRequirements(m_Pickup);
   }
 
   // Called when the command is initially scheduled.

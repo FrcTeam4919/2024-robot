@@ -15,8 +15,8 @@ public class armsDownR extends Command {
 
   /**
    * Creates a new ExampleCommand.
-   *
-   * @param subsystem The subsystem used by this command.
+   *   * @param subsystem The subsystem used by this command.
+
    */
   public armsDownR(Climb Climb) {
     m_Climb = Climb;
